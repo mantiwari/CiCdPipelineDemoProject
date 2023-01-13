@@ -18,4 +18,9 @@ public class ProductController {
     public Iterable<Product> findAllProducts() {
         return productRepository.findAll();
     }
+
+    @GetMapping("/getMsg")
+    public String getMsg(){
+        return "Testing Successful!!!";
+    }
 }

@@ -8,18 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 import repository.ProductRepository;
 
 @RestController
-@RequestMapping("/api/product")
 public class ProductController {
 
-    @Autowired
-    private ProductRepository productRepository;
-
     @GetMapping
-    public Iterable<Product> findAllProducts() {
-        return productRepository.findAll();
-    }
-
-    @GetMapping("/getMsg")
     public String getMsg(){
         return "Testing Successful!!!";
     }
